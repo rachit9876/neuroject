@@ -4,10 +4,10 @@ import os
 os.makedirs('preview', exist_ok=True)
 
 images = [
-    ('pc/8K.purple.png', 'preview/8K.purple.jpg', (400, 225)),
-    ('pc/8K.green.png', 'preview/8K.green.jpg', (400, 225)),
-    ('pc/8K.white.png', 'preview/8K.white.jpg', (400, 225)),
-    ('mobile/8K.purple.png', 'preview/8K.purple.mobile.jpg', (225, 400))
+    ('pc/8K.purple.png', 'preview/8K.purple.jpg', (800, 450)),
+    ('pc/8K.green.png', 'preview/8K.green.jpg', (800, 450)),
+    ('pc/8K.white.png', 'preview/8K.white.jpg', (800, 450)),
+    ('mobile/8K.purple.png', 'preview/8K.purple.mobile.jpg', (450, 800))
 ]
 
 for src, dst, size in images:
