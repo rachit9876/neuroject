@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Dimensions Checker</title>
+</head>
+<body>
+    <h1>Image Dimensions</h1>
+    <div id="results"></div>
+    <script>
+        const images = [
+            'pc/8K.purple.png',
+            'pc/8K.green.png',
+            'pc/8K.white.png',
+            'mobile/8K.purple.png'
+        ];
+
+        const results = document.getElementById('results');
+        let loaded = 0;
+
+        images.forEach(src => {
+            const img = new Image();
+            img.onload = () => {
+                results.innerHTML += `<p><strong>${src}</strong>: ${img.width}x${img.height}</p>`;
+                loaded++;
+                if (loaded === images.length) {
+                    console.log('All images loaded');
+                }
+            };
+            img.onerror = () => {
+                results.innerHTML += `<p><strong>${src}</strong>: Failed to load</p>`;
+                loaded++;
+            };
+            img.src = src;
+        });
+    </script>
+</body>
+</html>
